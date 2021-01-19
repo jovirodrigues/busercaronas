@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire" class =>
     <toolbar :state="layout"/>
     <sidenav-left :state="layout"/>
     <v-content>
