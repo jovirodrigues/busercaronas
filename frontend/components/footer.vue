@@ -1,8 +1,8 @@
 <template>
   <v-footer color="pink" class="white--text" app>
-    <span>Vuetify</span>
+    <span>Buser Brasil</span>
     <v-spacer></v-spacer>
-    <span>&copy; 2017</span>
+    <span>&copy; 2021</span>
   </v-footer>
 </template>
 

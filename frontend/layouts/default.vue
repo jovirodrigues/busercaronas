@@ -1,7 +1,6 @@
 <template>
-  <v-app id="inspire" class =>
+  <v-app id="inspire">
     <toolbar :state="layout"/>
-    <sidenav-left :state="layout"/>
     <v-content>
       <v-container fluid>
         <nuxt></nuxt>
@@ -9,7 +8,7 @@
     </v-content>
     <le-footer/>
     <v-snackbar
-      :timeout="snack.timeout"
+      :timeout="snack.timeout" 
       :color="snack.color"
       bottom
       v-model="snack.visible"
