@@ -19,6 +19,9 @@ const api = {
     list_todos(){
         return get('/api/list_todos');
     }
+    list_caronas(){
+        return get ('/api/list_caronas')
+    }
 }
 export default api;
 

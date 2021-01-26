@@ -1,8 +1,8 @@
 <template>
   <v-toolbar color="white" dark fixed app clipped-right>
-    <v-toolbar-title><router-link :to="{ name: 'index'}"><img src="/busercaronas3.png" style="max-height: 70px; max-width: auto;"></router-link></v-toolbar-title>
+    <v-toolbar-title><router-link :to="{ name: 'index'}"><img src="/busercaronas3.png" style="max-height:64px;"></router-link> </v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-btn v-if="!logged_user" flat dark ripple class="ma-0 ml-5"  @click="open_login_dialog($event)">Login</v-btn>
+   <v-btn v-if="!logged_user" color = pink accent-2 flat ripple dark class="ma-0 ml-5" @click="open_login_dialog($event)">Entrar</v-btn>
     <v-menu v-if="logged_user" offset-y>
       <v-btn icon slot="activator" class="ma-0 ml-5">
         <v-avatar size="42px">
