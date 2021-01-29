@@ -5,7 +5,7 @@
 <script>
 
 export default {
-  asyncData (context) {
+  asyncData (context){
     return {
       username: context.params.username
     }

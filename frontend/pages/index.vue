@@ -1,8 +1,5 @@
 <template>
-  <div>
-  <v-progress-linear :indeterminate="true" v-if="!caronas"></v-progress-linear>
-  <home :caronas="caronas" v-if="caronas"></home>
-  </div>
+    <home :caronas="caronas"></home>
 </template>
 
 <script>
@@ -14,15 +11,15 @@ export default {
   components: {
     home
   },
-  data () {
-    return {
-      caronas: null,
-    }
-  },
-  mounted() {
-    AppApi.list_caronas().then(result => {
-      this.caronas = result.data
+  asyncData () {
+    return AppApi.list_caronas().then(result => {
+      return {
+        caronas: result.data
+      }
     })
+  },
+  data () {
+    return {}
   }
 }
 </script>
