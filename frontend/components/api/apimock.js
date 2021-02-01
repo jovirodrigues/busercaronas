@@ -46,27 +46,37 @@ const api = {
             ]
         });
     },
+    carona(text){
+        return mockasync({
+     
+            id: 1000,
+            author_name: logged_user.username,
+            author_avatar: 'https://newslab.com.br/wp-content/uploads/2018/08/pato-960x720',
+            horario_at: '18h 30',
+            info: text,    
+        })
+    },
 
     list_caronas(){
         return mockasync([
             {
               id: 1,
               author_name: 'Batata',
-              author_avatar: 'https://thumbs.dreamstime.com/b/polegar-bonito-dos-desenhos-animados-da-batata-acima-33233393.jpg',
+              author_avatar: 'https://newslab.com.br/wp-content/uploads/2018/08/pato-960x720',
               horario_at: '18h 30',
               info: 'Carona saindo da buser - sentido horta da zaléia',
             },
             {
               id: 2,
               author_name: 'Beterraba',
-              author_avatar: 'http://1.bp.blogspot.com/-A9_ROvP0efw/TZI9dUsXAKI/AAAAAAAAGCI/rD_-a3ZBF3U/s1600/Isaac_Newton_Biography%255B1%255D.jpg',
+              author_avatar:'beterraba.jpg',
               horario_at: '18h 00',
               info: 'Carona saindo da buser - sentido horti-fruti',
             },
             {
               id: 3,
               author_name:'Oranjo',
-              author_avatar: 'https://tv.i.uol.com.br/televisao/2011/11/18/annoying-orange-vai-virar-animacao-do-cartoon-network-1321641156778_300x300.jpg',
+              author_avatar: 'laranja].jpg',
               horario_at: '12h 00',
               info: 'Carona saindo do bairro das laranjeiras - sentido buser',
             }

@@ -1,12 +1,13 @@
 <template>
-    <v-list two-line>
+    <v-list three-line>
+        <h1 class="menssage">Caronas Disponíveis:</h1>
         <template v-for="caronas in caronas">
-            <v-list-tile avatar>
+            <v-list-tile>
                 <v-list-tile-avatar>
-                     <img :scr="caronas.author_avatar">
+                     <img :scr='caronas.author_avatar'>
                 </v-list-tile-avatar>
                 <v-list-tile-content>
-                    <v-liste-tile-title>
+                    <v-liste-tile-title class="title">
                         <router-link :to="{name: 'user-username', params:{username:caronas.author_name}}">{{caronas.author_name}}</router-link> - 
                         {{caronas.horario_at}}
                     </v-liste-tile-title>
@@ -22,10 +23,16 @@
 export default {
     props: ['caronas'],
     data () {
-    return {}
+        return {}
   }
 }
 </script>
 
 <style> 
- </style>
+    .title{
+       color: black;
+    }
+    .v-list__tile__sub-title{
+        font-size: 20px;
+    }
+</style>

@@ -1,6 +1,9 @@
 <template>
-  <h1>Esse é o perfil do {{username}}</h1>
+  <div class="batata">
+    batata
+  </div>
 </template>
+
 
 <script>
 
@@ -17,4 +20,8 @@ export default {
 </script>
 
 <style>
+  .batata {
+    display: flex;
+    font-size:"30px";
+  }
 </style>

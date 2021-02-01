@@ -1,12 +1,12 @@
 <template>
-  <v-toolbar color="white" dark fixed app clipped-right>
+  <v-toolbar color= white dark fixed app clipped-right>
     <v-toolbar-title><router-link :to="{ name: 'index'}"><img src="/busercaronas3.png" style="max-height:64px;"></router-link> </v-toolbar-title>
     <v-spacer></v-spacer>
-   <v-btn v-if="!logged_user" color = pink accent-2 flat ripple dark class="ma-0 ml-5" @click="open_login_dialog($event)">Entrar</v-btn>
+   <v-btn v-if="!logged_user" color = pink accent-2 flat ripple dark class="ma-0 ml-5" @click="open_login_dialog($event)">Entrar ou cadastrar</v-btn>
     <v-menu v-if="logged_user" offset-y>
       <v-btn icon slot="activator" class="ma-0 ml-5">
-        <v-avatar size="42px">
-          <img src="https://graph.facebook.com/4/picture?width=300&height=300">
+        <v-avatar size="46px">
+          <img src="https://newslab.com.br/wp-content/uploads/2018/08/pato-960x720.jpg">
         </v-avatar>
       </v-btn>
       <v-card class="no-padding">
@@ -14,7 +14,7 @@
           <v-list-tile avatar>
             <v-list-tile-avatar>
               <v-avatar>
-                <img src="https://graph.facebook.com/4/picture?width=300&height=300">
+                <img src=https://newslab.com.br/wp-content/uploads/2018/08/pato-960x720.jpg>
               </v-avatar>
             </v-list-tile-avatar>
             <v-list-tile-content>
@@ -25,14 +25,9 @@
         </v-list>
         <v-divider></v-divider>
         <v-list>
-          <v-list-tile @click="switchMode()">
-            <v-list-tile-content>
-              <v-list-tile-title>Staff mode</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
           <v-list-tile @click="logout()">
             <v-list-tile-content>
-              <v-list-tile-title>Log out</v-list-tile-title>
+              <v-list-tile-title>SAIR</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
@@ -72,3 +67,4 @@
     }
   }
 </script>
+
