@@ -2,7 +2,8 @@
   <v-toolbar color= white dark fixed app clipped-right>
     <v-toolbar-title><router-link :to="{ name: 'index'}"><img src="/busercaronas3.png" style="max-height:64px;"></router-link> </v-toolbar-title>
     <v-spacer></v-spacer>
-   <v-btn v-if="!logged_user" color = pink accent-2 flat ripple dark class="ma-0 ml-5" @click="open_login_dialog($event)">Entrar ou cadastrar</v-btn>
+   <v-btn v-if="!logged_user" color = pink accent-2 flat ripple dark class="ma-0 ml-5" @click="open_login_dialog($event)">Entrar</v-btn>
+   <v-btn v-if="!logged_user" color = pink accent-2 flat ripple dark class="ma-0 ml-5" @click="open_cads_dialog($event)">Cadastrar</v-btn>
     <v-menu v-if="logged_user" offset-y>
       <v-btn icon slot="activator" class="ma-0 ml-5">
         <v-avatar size="46px">
@@ -34,17 +35,19 @@
       </v-card>
     </v-menu>
     <login-dialog ref="login_dialog"/>
+    <cads-dialog ref="cads_dialog"/>
   </v-toolbar>
 </template>
 
 <script>
   import Vuex from 'vuex'
   import loginDialog from '~/components/login-dialog.vue'
+  import cadsDialog from '~/components/cads-dialog.vue'
   import Snacks from '~/helpers/Snacks.js'
   import AppApi from '~apijs'
   export default {
     components: {
-      loginDialog
+      loginDialog, cadsDialog
     },
     computed: Object.assign(
       {},
@@ -57,6 +60,10 @@
       open_login_dialog (evt) {
         this.$refs.login_dialog.open();
         evt.stopPropagation();
+      },
+      open_cads_dialog (evt) {
+      this.$refs.cads_dialog.open();
+      evt.stopPropagation();
       },
       logout(){
         AppApi.logout().then(()=>{

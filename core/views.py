@@ -54,6 +54,17 @@ def list_todos(request):
     todos = todo_svc.list_todos()
     return JsonResponse({'todos': todos})
 
+def list_caronas(request):
+    caronas = [
+        {
+            'id': 1,
+            'author_name': 'Batata',
+            'author_avatar': 'https://newslab.com.br/wp-content/uploads/2018/08/pato-960x720',
+            'horario_at': '18h 30',
+            'info': 'Carona saindo da buser - sentido horta da zaléia',
+        }
+    ]
+    return JsonResponse(caronas, safe=False)
 
 def _user2dict(user):
     d = {

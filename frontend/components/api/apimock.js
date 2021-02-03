@@ -62,14 +62,14 @@ const api = {
             {
               id: 1,
               author_name: 'Batata',
-              author_avatar: 'https://newslab.com.br/wp-content/uploads/2018/08/pato-960x720',
+              author_avatar: 'https://thumbs.dreamstime.com/b/polegar-bonito-dos-desenhos-animados-da-batata-acima-33232984.jpg',
               horario_at: '18h 30',
               info: 'Carona saindo da buser - sentido horta da zaléia',
             },
             {
               id: 2,
               author_name: 'Beterraba',
-              author_avatar:'beterraba.jpg',
+              author_avatar:'http://cdn5.colorir.com/desenhos/color/201635/beterraba-1-comida-verduras-1291140.jpg',
               horario_at: '18h 00',
               info: 'Carona saindo da buser - sentido horti-fruti',
             },

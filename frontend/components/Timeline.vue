@@ -4,7 +4,7 @@
         <template v-for="caronas in caronas">
             <v-list-tile>
                 <v-list-tile-avatar>
-                     <img :scr='caronas.author_avatar'>
+                     <v-img :src= "caronas.author_avatar"/>
                 </v-list-tile-avatar>
                 <v-list-tile-content>
                     <v-liste-tile-title class="title">
