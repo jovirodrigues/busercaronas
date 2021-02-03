@@ -47,7 +47,7 @@
   import AppApi from '~apijs'
   export default {
     components: {
-      loginDialog, cadsDialog
+      loginDialog, cadsDialog,
     },
     computed: Object.assign(
       {},
@@ -62,8 +62,8 @@
         evt.stopPropagation();
       },
       open_cads_dialog (evt) {
-      this.$refs.cads_dialog.open();
-      evt.stopPropagation();
+        this.$refs.cads_dialog.open();
+        evt.stopPropagation();
       },
       logout(){
         AppApi.logout().then(()=>{

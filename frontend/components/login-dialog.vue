@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="visible" max-width="500px">
     <v-card light color="pink lighten-4" shaped>
-        <v-card-title >Bem vindo, que ação deseja executar?</v-card-title>
+        <v-card-title >Bem vindo!</v-card-title>
         <v-card-text>
           <v-container fluid>
             <v-text-field label="Username" required v-model="username"/>

@@ -8,6 +8,7 @@ function mockasync (data) {
   })
 }
 
+
 const api = {
     login(username, password){
         if(password){
@@ -16,6 +17,8 @@ const api = {
                 first_name: 'Mark',
                 last_name: 'Zuckerberg',
                 email: 'zuck@facebook.com',
+                slack: 'zuckzin',
+                whats: '000000000',
                 notifications_enabled: true,
                 permissions:{
                     ADMIN: username == 'admin',
@@ -81,7 +84,13 @@ const api = {
               info: 'Carona saindo do bairro das laranjeiras - sentido buser',
             }
         ])
+    },
+
+    cadastrar (userData) {
+        cadastrados.push(userData)
+        return mockasync(userData)
     }
 };
 
+let cadastrados = []
 export default api;
