@@ -1,31 +1,42 @@
 <template>
     <v-list three-line>
-        <h1 class="menssage">Caronas Disponíveis:</h1>
+        <h1>Caronas Disponíveis:</h1>
+        <v-space></v-space>
         <template v-for="caronas in caronas">
-            <v-list-tile>
+            <v-list-tile> 
                 <v-list-tile-avatar>
                      <v-img :src= "caronas.author_avatar"/>
                 </v-list-tile-avatar>
                 <v-list-tile-content>
-                    <v-liste-tile-title class="title">
-                        <router-link :to="{name: 'user-username', params:{username:caronas.author_name}}">{{caronas.author_name}}</router-link> - 
-                        {{caronas.horario_at}}
+                    <v-liste-tile-title>
+                        <router-link :to="{name: 'user-username', params:{username:caronas.author_name}}">{{caronas.author_name}}</router-link> 
                     </v-liste-tile-title>
-                    <v-list-tile-sub-title>{{caronas.info}}</v-list-tile-sub-title>
+                    <v-list-tile-sub-title>
+                        <v-card> Horário:  {{caronas.horario_at}} - Vagas: {{caronas.vagas}}</v-card>
+                        <v-card> Origem: {{caronas.origem}}  -  Destino: {{caronas.destino}}</v-card>
+                    </v-list-tile-sub-title>
                 </v-list-tile-content>
             </v-list-tile>
-            <v-divider></v-divider>
+            <v-divider/>
+            <v-divider/>
         </template>
     </v-list>        
 </template>
-<script>
 
+<script>
 export default {
     props: ['caronas'],
     data () {
-        return {}
-  }
+        return {
+        }
+    },
+    computed: {
+    logged_user () {
+      return this.$store.getters.logged_user
+    }
+  },
 }
+
 </script>
 
 <style> 

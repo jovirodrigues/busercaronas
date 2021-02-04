@@ -14,7 +14,7 @@
         </v-form>
       </v-container>
       <v-btn class="black--text darken-1" flat @click="close()">Cancelar</v-btn>
-      <v-btn class="black--text darken-1" flat @click="cads()" :loading="saving">Cadastrar</v-btn>
+      <v-btn class="black--text darken-1" flat @click="cads()" :loading="saving" :disabled="loading">Cadastrar</v-btn>
     </v-card>
   </v-dialog>
 </template>
@@ -53,8 +53,20 @@ export default {
       this.saving = true
       AppApi.cadastrar(this.cads).then(response =>{
         this.saving = false
-        this.close()
-        this.$router.push({name: 'index'})
+        this.loading = true;
+        this.error = false;
+        AppApi.login(this.userDatausername, this.userDatapassword).then((result)=>{
+          var user = result.data;
+          if(user){
+            this.$store.commit('SET_LOGGED_USER', user);
+            this.visible = false;
+            this.close();
+            console.log('logged')
+          } else {
+            this.error = true;
+          }
+          this.loading = false;
+        })
       })
     }
   },

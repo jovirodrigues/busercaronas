@@ -1,7 +1,7 @@
 <template>
   <div class="butom">
-    <v-btn dark color = "pink accent-2" v-if="logged_user" @click="postnewcar">Adicionar nova Carona</v-btn>
-    <textarea-dialog ref="newcaronadialog"></textarea-dialog>
+    <v-btn dark color = "pink accent-2" v-if="logged_user" @click="postnewcar">Adicionar nova Carona</v-btn> 
+  <textarea-dialog ref="newcaronadialog"></textarea-dialog>
   </div>
 </template>
 
