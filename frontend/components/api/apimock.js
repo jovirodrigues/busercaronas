@@ -66,14 +66,15 @@ const api = {
         })
     },
 
-    carona(text){
+    carona(origem, destino, vaga, horas){
         return mockasync({
             id: 1000,
             author_name: logged_user.username,
             author_avatar: 'https://img.icons8.com/color/452/avatar.png',
-            horario_at: '18h 30',
-            vagas: 4,
-            info: text    
+            horario_at: horas,
+            vagas: vaga,
+            origem: origem,
+            destino:  destino 
         })
     },
 

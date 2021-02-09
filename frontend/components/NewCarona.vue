@@ -27,10 +27,13 @@ export default {
       this.$refs.newcaronadialog.open({
         title: 'Nova Carona',
         label: 'Quais as informações?',
-        value: '',
+        origem: '',
+        destino: '',
+        vaga:'',
+        horas: '',
         action: 'Enviar',
         actionFunc: value => {
-          return AppApi.carona(value).then(carona => {
+          return AppApi.carona(origem, destino, vaga, horas).then(carona => {
             this.$emit('newcarona', carona)
           })
         }
