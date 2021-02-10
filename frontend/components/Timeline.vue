@@ -8,9 +8,9 @@
                      <v-img :src= "caronas.author_avatar"/>
                 </v-list-tile-avatar>
                 <v-list-tile-content>
-                    <v-liste-tile-title>
+                    <v-list-tile-title>
                         <router-link :to="{name: 'user-username', params:{username:caronas.author_name}}">{{caronas.author_name}}</router-link> 
-                    </v-liste-tile-title>
+                    </v-list-tile-title>
                     <v-list-tile-sub-title>
                         <v-card> Horário:  {{caronas.horario_at}} - Vagas: {{caronas.vagas}}</v-card>
                         <v-card> Origem: {{caronas.origem}}  -  Destino: {{caronas.destino}}</v-card>

@@ -25,14 +25,15 @@ export default {
   methods:{
     postnewcar() {
       this.$refs.newcaronadialog.open({
-        title: 'Nova Carona',
-        label: 'Quais as informações?',
+        title: 'Adicionar nova Carona',
+        label: 'Qual a origem da carona?',
+        label2: 'Qual o destino da carona?',
         origem: '',
         destino: '',
         vaga:'',
         horas: '',
         action: 'Enviar',
-        actionFunc: value => {
+        actionFunc: (origem, destino, vaga, horas) => {
           return AppApi.carona(origem, destino, vaga, horas).then(carona => {
             this.$emit('newcarona', carona)
           })

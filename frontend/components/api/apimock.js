@@ -129,6 +129,19 @@ const api = {
         ])
     },
 
+    list_cadastrados(){
+        return mockasync([
+            {
+                username:'',
+                senha:'',
+                slack:'',
+                email:'',
+                whats:'',
+
+            }
+        ])
+    },
+
     cadastrar (userData) {
         cadastrados.push(userData)
         return mockasync(userData)
